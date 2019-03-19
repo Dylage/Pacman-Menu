@@ -11,6 +11,7 @@
  
  
 #Affichage du menu
+echo -e
 echo "1-Synchroniser la liste des paquets"
 echo "2-Mettre a jour suite a la synchronisation"
 echo "3-Synchroniser puis mettre a jour"
