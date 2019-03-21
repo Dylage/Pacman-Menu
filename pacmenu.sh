@@ -6,9 +6,16 @@
 #Sous licence GPL, amusez vous avec
  
 #N'oubliez pas de le rendre executable et d'etre root / sudo
-#TODO : Ajouter un sudo / su automatique si un normal user le lance
+#TODO: Ajouter un sudo / su automatique si un normal user le lance
+#Et une traduction anglaise
+
 #Vous pouvez egalement le mettre dans /usr/local/bin/ pour qu'il soit dans le PATH du shell
  
+#Conseil :
+#Perso j'ai mis un alias pour l'utiliser en marquant juste pm
+#Pour celà, ajoutez dans votre ~/.bashrc :
+#alias pm='sudo pacmenu.sh'
+#Meme chose en root mais sans le sudo
  
 #Affichage du menu
 echo -e
