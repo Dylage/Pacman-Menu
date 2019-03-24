@@ -5,9 +5,11 @@
 #Cree par Dylage durant son temps libre
 #Sous licence GPL, amusez vous avec
 
-#N'oubliez pas de le rendre executable et d'etre root / sudo
 #TODO: Ajouter un sudo / su automatique si un normal user le lance
 #Et une traduction anglaise
+#Ainsi qu'une option --help
+
+#N'oubliez pas de le rendre executable et d'etre root / sudo
 
 #Vous pouvez egalement le mettre dans /usr/local/bin/ pour qu'il soit dans le PATH du shell
 
