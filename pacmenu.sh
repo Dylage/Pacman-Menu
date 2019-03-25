@@ -26,6 +26,7 @@ fi
 
 
 #Options rapides
+if [ $# -ne 0 ];then
     #Synchronisation avec les dépots
     #"j" pour mettre à jour
     if [ $1 == "synchro" ] || [ $1 == "j" ] || [ $1 == "Sy" ]; then
@@ -52,6 +53,7 @@ fi
     if [ $1 == "remove" ] || [ $1 == "r" ] || [ $1 == "R" ]; then
         pacman -R $2
     fi
+fi
 
 #On affiche le menu seulement en l'absence d'arguments
 if [ $# -eq 0 ]; then
