@@ -19,6 +19,12 @@
 #alias pm='sudo pacmenu.sh'
 #Meme chose en root mais sans le sudo
 
+#Verification root
+if [ $(id -u) -ne 0 ]; then
+	echo "Certaines options nécessitent d'être en root"
+fi
+
+
 #Options rapides
     #Synchronisation avec les dépots
     #"j" pour mettre à jour
