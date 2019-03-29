@@ -21,7 +21,7 @@
 
 #Verification root
 if [ $(id -u) -ne 0 ]; then
-	echo "Certaines options nécessitent d'être en root"
+	echo -e "\033[31mCertaines options nécessitent d'être en root\033[0m"
 fi
 
 
@@ -51,24 +51,25 @@ if [ $# -ne 0 ];then
     #Attention, ici j'ai mis celle qui supprime avec les dépendances car elle est, à mes yeux, la plus utile
     #Il ne s'agit que de mon avis, modifiez l'option à souhait
     if [ $1 == "remove" ] || [ $1 == "r" ] || [ $1 == "R" ]; then
-        pacman -R $2
+        pacman -Rs $2
     fi
 fi
 
 #On affiche le menu seulement en l'absence d'arguments
 if [ $# -eq 0 ]; then
     #Affichage du menu
-    echo -e
-    echo "1-Synchroniser la liste des paquets"
-    echo "2-Mettre a jour suite a la synchronisation"
-    echo "3-Synchroniser puis mettre a jour"
-    echo "4-Telecharger puis installer un paquet"
-    echo "5-Installer un paquet via disque ou lien"
-    echo "6-Supprimer un paquet"
-    echo "7-Supprimer un paquet puis ses dependances"
-    echo "8-Supprimer un paquet et ses dependances et ses configs"
-    echo "9-Rechercher un paquet sur le systeme"
-    echo "10-Rechercher un paquet dans les depots"
+    echo -e "##################--MENU--##################"
+    echo -e "En vert et entre crochet \033[32m[exemple]\033[0m, les options rapides"
+    echo -e "1-\033[32m[j]\033[0m Synchroniser la liste des paquets"
+    echo -e "2-Mettre a jour suite a la synchronisation"
+    echo -e "3-\033[32m[u]\033[0m Synchroniser puis mettre a jour"
+    echo -e "4-Telecharger puis installer un paquet"
+    echo -e "5-\033[32m[i]\033[0m Installer un paquet via disque ou lien"
+    echo -e "6-Supprimer un paquet"
+    echo -e "7-\033[32m[r]\033[0m Supprimer un paquet puis ses dependances"
+    echo -e "8-Supprimer un paquet et ses dependances et ses configs"
+    echo -e "9-Rechercher un paquet sur le systeme"
+    echo -e "10-\033[32m[s]\033[0m Rechercher un paquet dans les depots"
 
     echo "Votre choix :"
     read choix #Lecture de la variable de choix
@@ -83,19 +84,19 @@ if [ $# -eq 0 ]; then
         5) echo "Ou est le paquet a installer ?"
             read chemin
             pacman -U $chemin;;
-        6)echo "Quel paquet supprimer ?"
+        6) echo "Quel paquet supprimer ?"
             read nom
             pacman -R $nom;;
-        7)echo "Quel paquet supprimer (avec dependances)"
+        7) echo "Quel paquet supprimer (avec dependances)"
             read nom1
             pacman -Rs $nom1;;
-        8)echo "Quel paquet supprimer (avec dependances et config)"
+        8) echo "Quel paquet supprimer (avec dependances et config)"
             read nom2
             pacman -Rsn $nom2;;
-        9)echo "Quel paquet rechercher dans le systeme ?"
+        9) echo "Quel paquet rechercher dans le systeme ?"
             read nom3
             pacman -Qs $nom3 | more;; #pipe avec more pour la lecture
-        10)echo "Quel paquet rechercher dans les depots ?"
+        10) echo "Quel paquet rechercher dans les depots ?"
             read nom4
             pacman -Ss $nom4 | more;;
         *) echo "erreur saisie";; #Si choix n'est pas entre 1 et 10
