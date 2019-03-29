@@ -93,7 +93,7 @@ if [ $choix == -1 ] || [ $# -eq 0 ]; then
 fi
 
 case $choix in #case depend donc de la variable choix
-	1) pacman -Sy;;
+	1) $rt pacman -Sy;;
 	2) pacman -Su;;
 	3) $rt pacman -Syu;;
 	4)	if [[ $# -eq 0 ]]; then #Si on est passé par l'option rapide, inutile de demander
