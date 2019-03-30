@@ -101,6 +101,7 @@ case $choix in #case depend donc de la variable choix
 			read paq
 		else
 			paq=$2
+			echo "Installation de $paq"
 		fi
 
 		$rt pacman -S $paq;;
@@ -115,6 +116,7 @@ case $choix in #case depend donc de la variable choix
 			read nom1
 		else
 			nom1=$2
+			echo "Suppression de $nom1"
 		fi
 
 		$rt pacman -Rs $nom1;;
@@ -129,6 +131,7 @@ case $choix in #case depend donc de la variable choix
 			read nom4
 		else
 			nom4=$2
+			echo "Recherche de $nom4 :"
 		fi
 
 		pacman -Ss $nom4 | more;;
