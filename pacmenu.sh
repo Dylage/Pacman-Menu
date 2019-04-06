@@ -5,8 +5,7 @@
 #Cree par Dylage durant son temps libre
 #Sous licence GPL, amusez vous avec
 
-#TODO: Ajouter un sudo / su automatique si un normal user le lance
-#Et une traduction anglaise
+#TODO: Ajouter une traduction anglaise
 #Ainsi qu'une option --help
 
 #N'oubliez pas de le rendre executable et d'etre root / sudo
