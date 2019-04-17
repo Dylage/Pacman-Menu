@@ -1,7 +1,7 @@
 #!/bin/bash
 #lang=fr
 
-#Script pour Pacman ( car il y a trop de commandes a retenir )
+#Script pour Pacman ( car il y a trop de commandes a retenir d'après moi )
 #Cree par Dylage durant son temps libre
 #Sous licence GPL, amusez vous avec
 
