@@ -64,6 +64,10 @@ if [ $# -ne 0 ];then
     if [ $1 == "remove" ] || [ $1 == "r" ] || [ $1 == "R" ]; then
         choix=7
     fi
+
+    if [ $1== "R" ]; then
+	choix=8
+    fi
 fi
 
 #On affiche le menu seulement en l'absence d'arguments
@@ -78,7 +82,7 @@ if [ $choix == -1 ] || [ $# -eq 0 ]; then
     echo -e "5-\033[32m[i]\033[0m Installer un paquet via disque ou lien"
     echo -e "6-Supprimer un paquet"
     echo -e "7-\033[32m[r]\033[0m Supprimer un paquet puis ses dependances"
-    echo -e "8-Supprimer un paquet et ses dependances et ses configs"
+    echo -e "8-\033[32m[R]\033[0mSupprimer un paquet et ses dependances et ses configs"
     echo -e "9-Rechercher un paquet sur le systeme"
     echo -e "10-\033[32m[s]\033[0m Rechercher un paquet dans les depots"
 
