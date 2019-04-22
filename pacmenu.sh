@@ -61,11 +61,11 @@ if [ $# -ne 0 ];then
 
     #Attention, ici j'ai mis celle qui supprime avec les dépendances car elle est, à mes yeux, la plus utile
     #Il ne s'agit que de mon avis, modifiez l'option à souhait
-    if [ $1 == "remove" ] || [ $1 == "r" ] || [ $1 == "R" ]; then
+    if [ $1 == "remove" ] || [ $1 == "r" ]; then
         choix=7
     fi
 
-    if [ $1== "R" ]; then
+    if [ $1 == "R" ]; then
 	choix=8
     fi
 fi
